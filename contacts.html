@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kys - Контакты</title>
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+<body>
+<div class="pageContainer">
+    <header class="header">Хэдер</header>
+    <nav class="nav">
+        <a class="navLink" href="./index.html">Главная</a>
+        <a class="navLink" href="./news.html">Новости</a>
+        <a class="navLink" href="./practices.html">Практики</a>
+        <a class="navLink" href="./goods.html">Товары</a>
+        <a class="navLink" href="./contacts.html">Контакты</a>
+    </nav>
+    <main class="content">
+        <h1 class="pageTitle">Контакты</h1>
+        <section class="contactsSection">
+            <aside class="contactInfo">
+                <h2 class="contactTitle">Контактная информация</h2>
+                <address class="contactItem">
+                    <strong class="contactLabel">Email:</strong>
+                    <a class="contactValue" href="mailto:ivanov@example.com">ivanov@example.com</a>
+                </address>
+                <address class="contactItem">
+                    <strong class="contactLabel">Телефон:</strong>
+                    <a class="contactValue" href="tel:+79991234567">+7 (999) 123-45-67</a>
+                </address>
+                <address class="contactItem">
+                    <strong class="contactLabel">Адрес:</strong>
+                    <span class="contactValue">г. Москва, ул. Примерная, д. 123</span>
+                </address>
+                <dl class="contactItem">
+                    <dt class="contactLabel">Группа:</dt>
+                    <dd class="contactValue">ЭФБО-07-24</dd>
+                </dl>
+            </aside>
+            <section class="contactForm">
+                <h2 class="formTitle">Написать сообщение</h2>
+                <form class="messageForm" method="post" action="#">
+                  <div class="formGroup">
+                    <label class="formLabel" for="name">Имя:</label>
+                    <input class="formInput" type="text" id="name" name="name" required aria-describedby="name-desc">
+                    <small id="name-desc">Введите ваше полное имя</small>
+                  </div>
+                  <div class="formGroup">
+                    <label class="formLabel" for="email">Email:</label>
+                    <input class="formInput" type="email" id="email" name="email" required aria-describedby="email-desc">
+                    <small id="email-desc">Введите действующий email адрес</small>
+                  </div>
+                  <div class="formGroup">
+                    <label class="formLabel" for="message">Сообщение:</label>
+                    <textarea class="formTextarea" id="message" name="message" rows="5" required aria-describedby="message-desc"></textarea>
+                    <small id="message-desc">Опишите ваш вопрос или сообщение</small>
+                  </div>
+                  <button class="submitButton" type="submit">Отправить</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">Футер</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,466 @@
+/* Основные стили страницы */
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Навигация */
+.nav {
+    background-color: #f4f4f4;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navLink {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navLink:hover {
+    background-color: #ddd;
+}
+
+/* Основной контент */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+.pageTitle {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.profileHeader {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profileTitle {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profilePhoto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    object-fit: cover;
+}
+
+.profileName {
+    color: #555;
+    margin: 10px 0;
+}
+
+.profileGroup {
+    color: #777;
+    font-style: italic;
+}
+
+.aboutMe {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+/* Навыки */
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.skillTag {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Секция опыта */
+.experienceSection {
+    margin-top: 40px;
+}
+
+.sectionTitle {
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.experienceCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.experienceTitle {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.experienceDesc {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Стили для страницы новостей */
+.newsSection {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.newsCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.newsCard header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.newsTitle {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.newsDate {
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.newsContent {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Стили для страницы практик */
+.practicesSection {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.practiceCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.practiceCard header {
+    margin-bottom: 15px;
+}
+
+.practiceCard footer {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.practiceTitle {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.practiceDescription {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.practiceDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.practiceStatus {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.practiceDate {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Стили для страницы товаров */
+.goodsSection {
+    margin-top: 20px;
+}
+
+.goodsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.productCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+}
+
+.productCard header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productImage {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.productTitle {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.productPrice {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.productDescription {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.buyButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buyButton:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для страницы контактов */
+.contactsSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contactInfo {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contactTitle {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.contactItem {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+}
+
+.contactLabel {
+    color: #333;
+    min-width: 80px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.contactValue {
+    color: #555;
+    text-decoration: none;
+}
+
+.contactValue:hover {
+    text-decoration: underline;
+}
+
+dl.contactItem {
+    display: flex;
+    margin: 0 0 15px 0;
+}
+
+dt.contactLabel {
+    margin-right: 10px;
+}
+
+dd.contactValue {
+    margin: 0;
+}
+
+.contactForm {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.formTitle {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.messageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formGroup {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.formLabel {
+    display: block;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.formInput,
+.formTextarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.submitButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+/* Мелкие правки для мобильных экранов */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skillsContainer {
+        justify-content: center;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .goodsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .contactsSection {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .practiceDetails {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .contactForm {
+        padding: 20px;
+    }
+
+    .formLabel {
+        font-size: 15px;
+    }
+}
