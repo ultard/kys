@@ -426,6 +426,17 @@ dd.contactValue {
     align-self: flex-start;
 }
 
+/* Стили для футера */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 18px;
+    margin-top: 40px;
+    border-radius: 0 0 10px 10px;
+}
+
 /* Мелкие правки для мобильных экранов */
 @media (max-width: 768px) {
     .nav {
