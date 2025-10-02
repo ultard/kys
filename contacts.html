@@ -37,31 +37,56 @@
                     <dt class="contactLabel">Группа:</dt>
                     <dd class="contactValue">ЭФБО-07-24</dd>
                 </dl>
+                <button id="openContactDialog" class="openDialogButton" type="button">Написать сообщение</button>
             </aside>
-            <section class="contactForm">
-                <h2 class="formTitle">Написать сообщение</h2>
+            <dialog id="contactDialog" class="contactDialog" aria-labelledby="formTitle">
+                <h2 class="formTitle" id="formTitle">Написать сообщение</h2>
                 <form class="messageForm" method="post" action="#">
-                  <div class="formGroup">
-                    <label class="formLabel" for="name">Имя:</label>
-                    <input class="formInput" type="text" id="name" name="name" required aria-describedby="name-desc">
-                    <small id="name-desc">Введите ваше полное имя</small>
-                  </div>
-                  <div class="formGroup">
-                    <label class="formLabel" for="email">Email:</label>
-                    <input class="formInput" type="email" id="email" name="email" required aria-describedby="email-desc">
-                    <small id="email-desc">Введите действующий email адрес</small>
-                  </div>
-                  <div class="formGroup">
-                    <label class="formLabel" for="message">Сообщение:</label>
-                    <textarea class="formTextarea" id="message" name="message" rows="5" required aria-describedby="message-desc"></textarea>
-                    <small id="message-desc">Опишите ваш вопрос или сообщение</small>
-                  </div>
-                  <button class="submitButton" type="submit">Отправить</button>
+                    <div class="formGroup">
+                        <label class="formLabel" for="name">Имя:</label>
+                        <input class="formInput" type="text" id="name" name="name" required
+                               aria-describedby="name-desc">
+                        <small id="name-desc">Введите ваше полное имя</small>
+                    </div>
+                    <div class="formGroup">
+                        <label class="formLabel" for="email">Email:</label>
+                        <input class="formInput" type="email" id="email" name="email" required
+                               aria-describedby="email-desc">
+                        <small id="email-desc">Введите действующий email адрес</small>
+                    </div>
+                    <div class="formGroup">
+                        <label class="formLabel" for="message">Сообщение:</label>
+                        <textarea class="formTextarea" id="message" name="message" rows="5" required
+                                  aria-describedby="message-desc"></textarea>
+                        <small id="message-desc">Опишите ваш вопрос или сообщение</small>
+                    </div>
+                    <div class="dialogActions">
+                        <button class="submitButton" type="submit">Отправить</button>
+                        <button class="closeButton" type="button">Закрыть</button>
+                    </div>
                 </form>
-            </section>
+            </dialog>
         </section>
     </main>
     <footer class="footer">Футер</footer>
 </div>
+<script>
+    const dialog = document.getElementById('contactDialog');
+    const openBtn = document.getElementById('openContactDialog');
+    const closeBtn = dialog.querySelector('.closeButton');
+
+    openBtn.addEventListener('click', () => {
+        dialog.showModal();
+        dialog.querySelector('input, textarea').focus();
+    });
+
+    closeBtn.addEventListener('click', () => {
+        dialog.close();
+    });
+
+    dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close();
+    });
+</script>
 </body>
 </html>

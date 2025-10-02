@@ -362,15 +362,26 @@ dd.contactValue {
     margin: 0;
 }
 
-.contactForm {
+.contactDialog {
     background-color: white;
     border: 1px solid #ddd;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     box-sizing: border-box;
-    max-width: 100%;
-    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+}
+
+.openDialogButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .formTitle {
@@ -414,9 +425,7 @@ dd.contactValue {
     box-sizing: border-box;
 }
 
-.submitButton {
-    background-color: #007bff;
-    color: white;
+.submitButton, .closeButton {
     border: none;
     padding: 12px 24px;
     border-radius: 5px;
@@ -424,6 +433,16 @@ dd.contactValue {
     cursor: pointer;
     transition: background-color 0.3s;
     align-self: flex-start;
+}
+
+.submitButton {
+    color: white;
+    background-color: #007bff;
+}
+
+.closeButton {
+    color: black;
+    background-color: #f3f2f2;
 }
 
 /* Стили для футера */
