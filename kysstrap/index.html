@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kys - главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .skill-badge {
+            font-size: 0.9rem;
+        }
+        .experience-card {
+            transition: transform 0.3s ease;
+        }
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="bg-dark text-white py-3">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <h1 class="h4 mb-0">Kys Portfolio</h1>
+            </div>
+            <div class="col-auto">
+                <span class="badge bg-primary">ЭФБО-07-24</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="./index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./news.html">Новости</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./practices.html">Практики</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./goods.html">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="container my-5">
+    <!-- Profile Section -->
+    <section class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="display-4 mb-4">Информация об авторе</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <img src="./images/photo.svg" alt="Фото автора" class="profile-img rounded-circle mb-4">
+                            <h2 class="card-title h3">Поздняков Глеб Александрович</h2>
+                            <p class="card-text text-muted lead">ЭФБО-07-24</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary me-2">Frontend Developer</span>
+                                <span class="badge bg-success">Web Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="row mb-5">
+        <div class="col-12">
+            <div class="card bg-light border-0">
+                <div class="card-body p-4">
+                    <h3 class="card-title h4 mb-3">
+                        <i class="bi bi-person-circle me-2"></i>Обо мне
+                    </h3>
+                    <p class="card-text lead">
+                        Я — цифровой алхимик, превращающий код в магию интернета. Родился в эпоху, когда пиксели были квадратными, а сайты — простыми, но с тех пор эволюционировал в охотника за багами и создателя виртуальных миров. В свободное время экспериментирую с нейронными сетями, чтобы они генерировали мне идеи для новых проектов, или сражаюсь с алгоритмами в поисках идеального кода. Моя цель — сделать веб не просто функциональным, а по-настоящему живым и вдохновляющим!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="row mb-5">
+        <div class="col-12">
+            <h3 class="h2 mb-4 text-center">
+                <i class="bi bi-tools me-2"></i>Мои навыки
+            </h3>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex justify-content-center">
+                            <span class="badge bg-primary skill-badge p-3 w-100 text-center">
+                                Волшебник HTML: Строю фундаменты цифровых замков
+                            </span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex justify-content-center">
+                            <span class="badge bg-success skill-badge p-3 w-100 text-center">
+                                Мастер CSS: Оживляю дизайны радугой стилей
+                            </span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex justify-content-center">
+                            <span class="badge bg-warning text-dark skill-badge p-3 w-100 text-center">
+                                Повелитель JavaScript: Управляю динамикой как супергерой
+                            </span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex justify-content-center">
+                            <span class="badge bg-info skill-badge p-3 w-100 text-center">
+                                Гуру Git: Путешествую по веткам времени без потерь
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="row">
+        <div class="col-12">
+            <h3 class="h2 mb-4 text-center">
+                <i class="bi bi-briefcase me-2"></i>Мой опыт работы
+            </h3>
+            <div class="row g-4">
+                <!-- Experience 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card experience-card h-100 shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="h5 mb-0">Космический кодер</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Разрабатывал межгалактический портал для инопланетных пользователей. Освоил телепортацию данных через API и защитил от хакерских метеоритов. Результат: сайт, который загружается быстрее скорости света!
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-rocket-takeoff me-1"></i>Космический опыт
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card experience-card h-100 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h4 class="h5 mb-0">Подводный верстальщик</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Создавал подводный веб-мир для русалок и тритонов. Адаптировал дизайн под жидкие экраны, интегрировал анимации волн с CSS и обеспечил водонепроницаемость кода. Теперь океан полон динамичных страниц!
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-droplet me-1"></i>Подводные технологии
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card experience-card h-100 shadow-sm">
+                        <div class="card-header bg-warning text-dark">
+                            <h4 class="h5 mb-0">Временной хакер</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Путешествовал во времени, фикся баги в исторических сайтах. Исправлял верстку динозавров эпохи Web 1.0 и добавлял responsive-дизайн в средневековые свитки. Урок: даже прошлое нуждается в современном коде!
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">
+                                <i class="bi bi-clock-history me-1"></i>Временные парадоксы
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2024 Kys Portfolio. Все права защищены.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="social-links">
+                    <a href="#" class="text-white me-3"><i class="bi bi-github"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

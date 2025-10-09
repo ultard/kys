@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kys - Контакты</title>
+    <link rel="stylesheet" href="../style/kysbem.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">Хэдер</header>
+    <nav class="nav">
+        <a class="nav__link" href="./index.html">Главная</a>
+        <a class="nav__link" href="./news.html">Новости</a>
+        <a class="nav__link" href="./practices.html">Практики</a>
+        <a class="nav__link" href="./goods.html">Товары</a>
+        <a class="nav__link" href="./contacts.html">Контакты</a>
+    </nav>
+    <main class="content">
+        <h1 class="page-title">Контакты</h1>
+        <section class="contacts">
+            <aside class="contacts__info">
+                <h2 class="contacts__title">Контактная информация</h2>
+                <address class="contacts__item">
+                    <strong class="contacts__label">Email:</strong>
+                    <a class="contacts__value" href="mailto:ivanov@example.com">ivanov@example.com</a>
+                </address>
+                <address class="contacts__item">
+                    <strong class="contacts__label">Телефон:</strong>
+                    <a class="contacts__value" href="tel:+79991234567">+7 (999) 123-45-67</a>
+                </address>
+                <address class="contacts__item">
+                    <strong class="contacts__label">Адрес:</strong>
+                    <span class="contacts__value">г. Москва, ул. Примерная, д. 123</span>
+                </address>
+                <dl class="contacts__item">
+                    <dt class="contacts__label">Группа:</dt>
+                    <dd class="contacts__value">ЭФБО-07-24</dd>
+                </dl>
+                <button id="openContactDialog" class="contacts__button" type="button">Написать сообщение</button>
+            </aside>
+            <dialog id="contactDialog" class="dialog" aria-labelledby="formTitle">
+                <h2 class="dialog__title" id="formTitle">Написать сообщение</h2>
+                <form class="form" method="post" action="#">
+                    <div class="form__group">
+                        <label class="form__label" for="name">Имя:</label>
+                        <input class="form__input" type="text" id="name" name="name" required
+                               aria-describedby="name-desc">
+                        <small id="name-desc">Введите ваше полное имя</small>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="email">Email:</label>
+                        <input class="form__input" type="email" id="email" name="email" required
+                               aria-describedby="email-desc">
+                        <small id="email-desc">Введите действующий email адрес</small>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="message">Сообщение:</label>
+                        <textarea class="form__textarea" id="message" name="message" rows="5" required
+                                  aria-describedby="message-desc"></textarea>
+                        <small id="message-desc">Опишите ваш вопрос или сообщение</small>
+                    </div>
+                    <div class="form__actions">
+                        <button class="form__button form__button--submit" type="submit">Отправить</button>
+                        <button class="form__button form__button--close" type="button">Закрыть</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+    </main>
+    <footer class="footer">Футер</footer>
+</div>
+<script>
+    const dialog = document.getElementById('contactDialog');
+    const openBtn = document.getElementById('openContactDialog');
+    const closeBtn = dialog.querySelector('.form__button--close');
+
+    openBtn.addEventListener('click', () => {
+        dialog.showModal();
+        dialog.querySelector('input, textarea').focus();
+    });
+
+    closeBtn.addEventListener('click', () => {
+        dialog.close();
+    });
+
+    dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) dialog.close();
+    });
+</script>
+</body>
+</html>
