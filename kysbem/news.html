@@ -15,34 +15,51 @@
         <a class="nav__link" href="./practices.html">Практики</a>
         <a class="nav__link" href="./goods.html">Товары</a>
         <a class="nav__link" href="./contacts.html">Контакты</a>
+        <button class="nav__theme-toggle" id="themeToggle">Темная тема</button>
     </nav>
     <main class="content">
         <h1 class="page-title">Новости</h1>
         <section class="news">
             <article class="news__card">
                 <header class="news__card-header">
-                    <h2 class="news__title">Новость 1</h2>
-                    <time class="news__date" datetime="2025-09-25">25 сентября 2025</time>
+                    <h2 class="news__title">апуск нового проекта по веб-дизайну</h2>
+                    <time class="news__date" datetime="2025-10-10">10 октября 2025</time>
                 </header>
-                <p class="news__content">Содержание первой новости. Здесь может быть описание важного события или обновления.</p>
+                <p class="news__content">Мы успешно запустили новый проект для международного клиента, создав уникальный адаптивный дизайн для их e-commerce платформы. Проект сочетает современные технологии и креативный подход, обеспечивая удобство для пользователей.</p>
             </article>
             <article class="news__card">
                 <header class="news__card-header">
-                    <h2 class="news__title">Новость 2</h2>
-                    <time class="news__date" datetime="2025-09-20">20 сентября 2025</time>
+                    <h2 class="news__title">Участие в хакатоне TechTrend 2025</h2>
+                    <time class="news__date" datetime="2025-09-28">28 сентября 2025</time>
                 </header>
-                <p class="news__content">Содержание второй новости. Интересная информация для читателей.</p>
+                <p class="news__content">Наша команда заняла 2-е место на международном хакатоне TechTrend 2025, разработав прототип мобильного приложения для управления задачами с использованием ИИ. Это был невероятный опыт и шаг вперед в наших навыках!</p>
             </article>
             <article class="news__card">
                 <header class="news__card-header">
                     <h2 class="news__title">Новость 3</h2>
                     <time class="news__date" datetime="2025-09-15">15 сентября 2025</time>
                 </header>
-                <p class="news__content">Содержание третьей новости. Еще одно важное сообщение.</p>
+                <p class="news__content">Добавлены новые кейсы в раздел "Практики", включая разработку корпоративного сайта для стартапа и интерактивное веб-приложение для образовательной платформы. Загляните, чтобы узнать больше о наших последних работах!</p>
             </article>
         </section>
     </main>
     <footer class="footer">Футер</footer>
 </div>
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? 'Светлая тема' : 'Темная тема';
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        themeToggle.textContent = newTheme === 'dark' ? 'Светлая тема' : 'Темная тема';
+    });
+</script>
 </body>
 </html>
